@@ -61,13 +61,19 @@ module.exports = function (source, destination, appleTouchBackground = 'white', 
     }
 
     try {
-      await sharp(`${destination}/favicon-apple-touch-temp.png`)
+      const paddedAppleTouchIcon = await sharp(`${destination}/favicon-apple-touch-temp.png`)
         .extend({
           top: appleTouchPadding,
           right: appleTouchPadding,
           bottom: appleTouchPadding,
           left: appleTouchPadding,
           background: appleTouchBackground
+        })
+        .toBuffer()
+      await sharp(paddedAppleTouchIcon)
+        .resize({
+          height: 180,
+          width: 180
         })
         .toFile(`${destination}/favicon-apple-touch.png`)
       fs.unlinkSync(`${destination}/favicon-apple-touch-temp.png`)
