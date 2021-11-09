@@ -25,8 +25,8 @@ yarn exec -- favicons [...options]
 2. Add these to the document head.
 
 ```html
-<link rel="icon" href="/favicon-48.png" type="image/png" />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" type="image/png" href="/favicon-48.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="apple-touch-icon" href="/favicon-apple-touch.png" />
 <link rel="manifest" href="/manifest.json" />
 ```
