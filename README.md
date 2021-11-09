@@ -2,7 +2,9 @@
 
 Generates a set of favicons from an SVG file that will satisfy the needs of 99.9% of modern web projects.
 
-Inspired by https://www.leereamsnyder.com/blog/favicons-in-2021.
+Inspired by https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs and https://www.leereamsnyder.com/blog/favicons-in-2021.
+
+This tool operates under the assumption that the provided SVG file is square (same height and width). This tool does not generate the legacy masked Safari icon as described in the aforementioned article. If you absolutely need legacy Safari masked icon support, create it manually and place it in the public directory yourself.
 
 ## Install
 
