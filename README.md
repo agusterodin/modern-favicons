@@ -16,7 +16,7 @@ yarn add -D modern-favicons
 
 ## Usage
 
-1. Generate the icons to your project's public directory using the CLI command.
+1. Generate the icons to your project's public directory using the CLI command. Run the command without options to see a full list of options.
 
 ```sh
 npx favicons [...options]
