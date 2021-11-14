@@ -19,9 +19,9 @@ yarn add -D modern-favicons
 1. Generate the icons to your project's public directory using the CLI command. Run the command without options to see a full list of options.
 
 ```sh
-npx favicons [...options]
+npx generate-favicons [...options]
 # or
-yarn exec -- favicons [...options]
+yarn exec -- generate-favicons [...options]
 ```
 
 2. Add these to the document head.
@@ -42,4 +42,16 @@ yarn exec -- favicons [...options]
     { "src": "/favicon-512.png", "type": "image/png", "sizes": "512x512" }
   ]
 }
+```
+
+4. Add [pre script](https://docs.npmjs.com/cli/v7/using-npm/scripts#pre--post-scripts) entries to your package.json for development and build processes.
+
+```json
+{
+  "scripts": {
+    "predev": "npx generate-favicons --source images/favicon.svg --destination ./public",
+    "prebuild": "npx generate-favicons --source images/favicon.svg --destination ./public"
+  }
+}
+
 ```
