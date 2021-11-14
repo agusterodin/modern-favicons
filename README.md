@@ -16,7 +16,7 @@ yarn add -D modern-favicons
 
 ## Usage
 
-1. Generate the icons to your project's public directory using the CLI command. Run the command without options to see a full list of options.
+1. Generate the icons to your project's public directory using the CLI command. Run the command without options to see a full list of options. Skip this step if you plan on automating this by adding pre scripts to your package.json.
 
 ```sh
 npx generate-favicons [...options]
@@ -55,3 +55,5 @@ yarn exec -- generate-favicons [...options]
 }
 
 ```
+
+5. Configure .gitignore to exclude the generated favicons.
