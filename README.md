@@ -4,7 +4,7 @@ Generates a set of favicons from an SVG file that will satisfy the needs of 99.9
 
 Inspired by https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs and https://www.leereamsnyder.com/blog/favicons-in-2021.
 
-This tool operates under the assumption that the provided SVG file is square (same height and width). This tool does not generate the legacy masked Safari icon described in the aforementioned articles. If you absolutely need legacy Safari masked icon support, create it manually and place it in the public directory yourself.
+This tool operates under the assumption that your are running Node 16+ and that the provided SVG file is square (same height and width). This tool does not generate the legacy masked Safari icon described in the aforementioned articles. If you absolutely need legacy Safari masked icon support, create it manually and place it in the public directory yourself.
 
 ## Install
 
@@ -44,7 +44,7 @@ yarn exec -- generate-favicons [...options]
 }
 ```
 
-4. Add [pre script](https://docs.npmjs.com/cli/v7/using-npm/scripts#pre--post-scripts) entries to your package.json for development and build processes.
+4. Add [pre script](https://docs.npmjs.com/cli/v7/using-npm/scripts#pre--post-scripts) entries to package.json for development and build processes.
 
 ```json
 {
@@ -56,4 +56,10 @@ yarn exec -- generate-favicons [...options]
 
 ```
 
-5. Configure .gitignore to exclude the generated favicons.
+5. Add these entries to .gitignore to exclude the generated favicons.
+
+```
+/public/*.png
+/public/*.ico
+/public/*.svg
+```
