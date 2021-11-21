@@ -53,12 +53,11 @@ yarn exec -- generate-favicons [...options]
     "prebuild": "npx generate-favicons --source images/favicon.svg --destination ./public"
   }
 }
-
 ```
 
 5. Add these entries to .gitignore to exclude the generated favicons.
 
-```
+```gitignore
 /public/*.png
 /public/*.ico
 /public/*.svg
