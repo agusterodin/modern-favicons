@@ -10,5 +10,9 @@
     "sharp": "^0",
     "svgo": "^3"
   },
-  "author": "Jeff Rosen"
+  "author": "Jeff Rosen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agusterodin/modern-favicons.git"
+  }
 }
