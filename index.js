@@ -29,15 +29,10 @@ module.exports = function (source, destination, appleTouchBackground = 'white', 
   }
   Object.keys(resultFilesCopied).forEach(resultFileName => (resultFilesCopied[resultFileName] = false))
 
-  const callback = async function (error, response) {
-    if (error) {
-      console.error(`favicon generation failed: ${error.message}`)
-      process.exit(1)
-    }
-
+  const callback = async function (response) {
     try {
       const svgIcon = fs.readFileSync(source)
-      const optimizedSvgIcon = (await svgo.optimize(svgIcon, { path: `${destination}/favicon.svg` })).data
+      const optimizedSvgIcon = svgo.optimize(svgIcon, { path: `${destination}/favicon.svg` }).data
       fs.writeFileSync(`${destination}/favicon.svg`, optimizedSvgIcon)
     } catch (error) {
       console.error(`favicon generation failed: failed to produce optimized svg (${error})`)
@@ -83,5 +78,11 @@ module.exports = function (source, destination, appleTouchBackground = 'white', 
     }
   }
 
-  favicons(source, configuration, callback)
+  favicons
+    .favicons(source, configuration)
+    .then(result => callback(result))
+    .catch(error => {
+      console.error(`favicon generation failed: ${error.message}`)
+      process.exit(1)
+    })
 }
