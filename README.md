@@ -1,6 +1,6 @@
 # Modern Favicons
 
-Generates a set of favicons from an SVG file that will satisfy the needs of 99.9% of modern web projects.
+Generates a set of favicons from an SVG file that will satisfy the needs of most modern web projects.
 
 Inspired by https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs and https://www.leereamsnyder.com/blog/favicons-in-2021.
 
