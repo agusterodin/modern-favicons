@@ -1,13 +1,13 @@
 {
   "name": "modern-favicons",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "main": "index.js",
   "bin": {
     "generate-favicons": "./entryPoint.js"
   },
   "dependencies": {
-    "favicons": "7.1.4",
-    "sharp": "0.32.4",
+    "favicons": "^7",
+    "sharp": "^0",
     "svgo": "^3"
   },
   "author": "Jeff Rosen",
