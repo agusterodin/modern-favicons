@@ -1,6 +1,6 @@
 {
   "name": "modern-favicons",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "main": "index.js",
   "bin": {
     "generate-favicons": "./entryPoint.js"
