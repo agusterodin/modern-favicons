@@ -1,11 +1,12 @@
 {
   "name": "modern-favicons",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.js",
   "bin": {
     "generate-favicons": "./entryPoint.js"
   },
   "dependencies": {
+    "commander": "^12",
     "favicons": "^7",
     "sharp": "^0",
     "svgo": "^3"
